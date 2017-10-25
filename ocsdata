@@ -1,0 +1,2608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REQUEST>
+  <CONTENT>
+    <BIOS>
+    </BIOS>
+    <CONTROLLERS>
+      <MANUFACTURER>Intel Corporation 440FX - 82441FX PMC [Natoma]</MANUFACTURER>
+      <NAME>Host bridge [0600]</NAME>
+      <PCIID>8086:1237</PCIID>
+      <PCISLOT>00:00.0</PCISLOT>
+      <TYPE>rev 02</TYPE>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <MANUFACTURER>Intel Corporation 82371SB PIIX3 ISA [Natoma/Triton II]</MANUFACTURER>
+      <NAME>ISA bridge [0601]</NAME>
+      <PCIID>8086:7000</PCIID>
+      <PCISLOT>00:01.0</PCISLOT>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <MANUFACTURER>InnoTek Systemberatung GmbH VirtualBox Graphics Adapter</MANUFACTURER>
+      <NAME>VGA compatible controller [0300]</NAME>
+      <PCIID>80ee:beef</PCIID>
+      <PCISLOT>00:02.0</PCISLOT>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <DRIVER>e1000</DRIVER>
+      <MANUFACTURER>Intel Corporation 82540EM Gigabit Ethernet Controller</MANUFACTURER>
+      <NAME>Ethernet controller [0200]</NAME>
+      <PCIID>8086:100e</PCIID>
+      <PCISLOT>00:03.0</PCISLOT>
+      <TYPE>rev 02</TYPE>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <DRIVER>vboxguest</DRIVER>
+      <MANUFACTURER>InnoTek Systemberatung GmbH VirtualBox Guest Service</MANUFACTURER>
+      <NAME>System peripheral [0880]</NAME>
+      <PCIID>80ee:cafe</PCIID>
+      <PCISLOT>00:04.0</PCISLOT>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <MANUFACTURER>Intel Corporation 82801AA AC'97 Audio Controller</MANUFACTURER>
+      <NAME>Multimedia audio controller [0401]</NAME>
+      <PCIID>8086:2415</PCIID>
+      <PCISLOT>00:05.0</PCISLOT>
+      <TYPE>rev 01</TYPE>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <DRIVER>piix4_smbus</DRIVER>
+      <MANUFACTURER>Intel Corporation 82371AB/EB/MB PIIX4 ACPI</MANUFACTURER>
+      <NAME>Bridge [0680]</NAME>
+      <PCIID>8086:7113</PCIID>
+      <PCISLOT>00:07.0</PCISLOT>
+      <TYPE>rev 08</TYPE>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <DRIVER>e1000</DRIVER>
+      <MANUFACTURER>Intel Corporation 82540EM Gigabit Ethernet Controller</MANUFACTURER>
+      <NAME>Ethernet controller [0200]</NAME>
+      <PCIID>8086:100e</PCIID>
+      <PCISLOT>00:08.0</PCISLOT>
+      <TYPE>rev 02</TYPE>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <DRIVER>ahci</DRIVER>
+      <MANUFACTURER>Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]</MANUFACTURER>
+      <NAME>SATA controller [0106]</NAME>
+      <PCIID>8086:2829</PCIID>
+      <PCISLOT>00:0d.0</PCISLOT>
+      <TYPE>rev 02</TYPE>
+    </CONTROLLERS>
+    <CPUS>
+      <CORES>8</CORES>
+      <CPUARCH>x86_64</CPUARCH>
+      <CURRENT_SPEED>2594</CURRENT_SPEED>
+      <DATA_WIDTH>64</DATA_WIDTH>
+      <L2CACHESIZE>6144</L2CACHESIZE>
+      <LOGICAL_CPUS>8</LOGICAL_CPUS>
+      <MANUFACTURER>Intel</MANUFACTURER>
+      <TYPE>Intel(R) Core(TM) i7-4720HQ CPU @ 2.60GHz</TYPE>
+    </CPUS>
+    <DRIVES>
+      <FILESYSTEM>aufs</FILESYSTEM>
+      <FREE>49937</FREE>
+      <TOTAL>57049</TOTAL>
+      <TYPE>/</TYPE>
+      <VOLUMN>none</VOLUMN>
+    </DRIVES>
+    <DRIVES>
+      <FILESYSTEM>ext4</FILESYSTEM>
+      <FREE>49937</FREE>
+      <TOTAL>57049</TOTAL>
+      <TYPE>/etc/hosts</TYPE>
+      <VOLUMN>/dev/sda1</VOLUMN>
+    </DRIVES>
+    <HARDWARE>
+      <CHECKSUM>1572863</CHECKSUM>
+      <DATELASTLOGGEDUSER>boot  Tue Oct 24</DATELASTLOGGEDUSER>
+      <DESCRIPTION>x86_64/00-00-00 05:27:01</DESCRIPTION>
+      <IPADDR>172.17.0.2</IPADDR>
+      <LASTLOGGEDUSER>reboot</LASTLOGGEDUSER>
+      <MEMORY>3949</MEMORY>
+      <NAME>cd9e74304e24</NAME>
+      <OSCOMMENTS>#1 SMP Wed Oct 18 17:00:16 UTC 2017</OSCOMMENTS>
+      <OSNAME>CentOS Linux release 7.4.1708 (Core) </OSNAME>
+      <OSVERSION>4.4.93-boot2docker</OSVERSION>
+      <PROCESSORN>1</PROCESSORN>
+      <PROCESSORS></PROCESSORS>
+      <PROCESSORT>Intel(R) Core(TM) i7-4720HQ CPU @ 2.60GHz</PROCESSORT>
+      <SWAP>1893</SWAP>
+    </HARDWARE>
+    <INPUTS>
+      <DESCRIPTION>AT Translated Set 2 keyboard</DESCRIPTION>
+      <TYPE>sysrq</TYPE>
+    </INPUTS>
+    <INPUTS>
+      <DESCRIPTION>ImExPS/2 Generic Explorer Mouse</DESCRIPTION>
+      <TYPE>Pointing</TYPE>
+    </INPUTS>
+    <INPUTS>
+      <DESCRIPTION>PC Speaker</DESCRIPTION>
+      <TYPE>Keyboard</TYPE>
+    </INPUTS>
+    <INPUTS>
+      <DESCRIPTION>Video Bus</DESCRIPTION>
+      <TYPE>Keyboard</TYPE>
+    </INPUTS>
+    <INPUTS>
+      <DESCRIPTION>VirtualBox mouse integration</DESCRIPTION>
+      <TYPE>event6</TYPE>
+    </INPUTS>
+    <NETWORKS>
+    </NETWORKS>
+    <SOFTWARES>
+      <COMMENTS>X.Org X11 libfontenc runtime library</COMMENTS>
+      <FILESIZE>55701</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:53</INSTALLDATE>
+      <NAME>libfontenc.x86_64</NAME>
+      <VERSION>1.1.3-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>CentOS Linux release file</COMMENTS>
+      <FILESIZE>37949</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:49</INSTALLDATE>
+      <NAME>centos-release.x86_64</NAME>
+      <VERSION>7-4.1708.el7.centos</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Directories used by font packages</COMMENTS>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:53</INSTALLDATE>
+      <NAME>fontpackages-filesystem.noarch</NAME>
+      <VERSION>1.44-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The basic directory layout for a Linux system</COMMENTS>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:49</INSTALLDATE>
+      <NAME>filesystem.x86_64</NAME>
+      <VERSION>3.2-21.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>X.Org X11 ICE runtime library</COMMENTS>
+      <FILESIZE>152213</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:54</INSTALLDATE>
+      <NAME>libICE.x86_64</NAME>
+      <VERSION>1.0.9-9.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The skeleton package which defines a simple CentOS Linux system</COMMENTS>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:49</INSTALLDATE>
+      <NAME>basesystem.noarch</NAME>
+      <VERSION>10.0-7.el7.centos</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Scientific and engineering fonts</COMMENTS>
+      <FILESIZE>1892532</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:54</INSTALLDATE>
+      <NAME>stix-fonts.noarch</NAME>
+      <VERSION>1.1.0-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>ElementTree-like Python bindings for libxml2 and libxslt</COMMENTS>
+      <FILESIZE>2722705</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:55</INSTALLDATE>
+      <NAME>python-lxml.x86_64</NAME>
+      <VERSION>3.2.1-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Freebl library for the Network Security Services</COMMENTS>
+      <FILESIZE>540716</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:50</INSTALLDATE>
+      <NAME>nss-softokn-freebl.x86_64</NAME>
+      <VERSION>3.28.3-8.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Macros and scripts for Java packaging support</COMMENTS>
+      <FILESIZE>160151</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:55</INSTALLDATE>
+      <NAME>javapackages-tools.noarch</NAME>
+      <VERSION>3.4.1-11.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The GNU libc libraries</COMMENTS>
+      <FILESIZE>14107776</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:56</INSTALLDATE>
+      <NAME>glibc.x86_64</NAME>
+      <VERSION>2.17-196.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>X.Org X11 font utilities</COMMENTS>
+      <FILESIZE>327243</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:55</INSTALLDATE>
+      <NAME>xorg-x11-font-utils.x86_64</NAME>
+      <VERSION>7.5-20.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>GNU Standard C++ Library</COMMENTS>
+      <FILESIZE>1081666</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:56</INSTALLDATE>
+      <NAME>libstdc++.x86_64</NAME>
+      <VERSION>4.8.5-16.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Type1 fonts provided by the X Window System</COMMENTS>
+      <FILESIZE>883992</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:55</INSTALLDATE>
+      <NAME>xorg-x11-fonts-Type1.noarch</NAME>
+      <VERSION>7.5-9.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The GNU Bourne Again shell</COMMENTS>
+      <FILESIZE>3663773</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:56</INSTALLDATE>
+      <NAME>bash.x86_64</NAME>
+      <VERSION>4.2.46-29.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Sample Authorization Protocol for X</COMMENTS>
+      <FILESIZE>55529</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:57</INSTALLDATE>
+      <NAME>libXau.x86_64</NAME>
+      <VERSION>1.0.8-2.1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl-compatible regular expression library</COMMENTS>
+      <FILESIZE>1475532</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:56</INSTALLDATE>
+      <NAME>pcre.x86_64</NAME>
+      <VERSION>8.32-17.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Common data for libX11</COMMENTS>
+      <FILESIZE>1335662</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:57</INSTALLDATE>
+      <NAME>libX11-common.noarch</NAME>
+      <VERSION>1.6.5-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The compression and decompression library</COMMENTS>
+      <FILESIZE>185710</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:56</INSTALLDATE>
+      <NAME>zlib.x86_64</NAME>
+      <VERSION>1.2.7-17.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>X.Org X11 libXext runtime library</COMMENTS>
+      <FILESIZE>87102</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:57</INSTALLDATE>
+      <NAME>libXext.x86_64</NAME>
+      <VERSION>1.3.3-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Libraries for decoding LZMA compression</COMMENTS>
+      <FILESIZE>239967</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>xz-libs.x86_64</NAME>
+      <VERSION>5.2.2-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>X.Org X11 libXtst runtime library</COMMENTS>
+      <FILESIZE>29938</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:57</INSTALLDATE>
+      <NAME>libXtst.x86_64</NAME>
+      <VERSION>1.2.3-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Common error description library</COMMENTS>
+      <FILESIZE>60417</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>libcom_err.x86_64</NAME>
+      <VERSION>1.42.9-10.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>X.Org X11 libXrender runtime library</COMMENTS>
+      <FILESIZE>46979</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:57</INSTALLDATE>
+      <NAME>libXrender.x86_64</NAME>
+      <VERSION>0.9.10-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>C library for parsing command line parameters</COMMENTS>
+      <FILESIZE>88516</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>popt.x86_64</NAME>
+      <VERSION>1.13-16.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Timezone data for Java</COMMENTS>
+      <FILESIZE>371020</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:58</INSTALLDATE>
+      <NAME>tzdata-java.noarch</NAME>
+      <VERSION>2017b-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A GNU stream text editor</COMMENTS>
+      <FILESIZE>601208</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>sed.x86_64</NAME>
+      <VERSION>4.2.2-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>JDKs configuration files copier</COMMENTS>
+      <FILESIZE>13253</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:58</INSTALLDATE>
+      <NAME>copy-jdk-configs.noarch</NAME>
+      <VERSION>2.2-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Library to read and write ELF files</COMMENTS>
+      <FILESIZE>934111</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>elfutils-libelf.x86_64</NAME>
+      <VERSION>0.168-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A library of functions for manipulating PNG image format files</COMMENTS>
+      <FILESIZE>616101</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:14:02</INSTALLDATE>
+      <NAME>libpng.x86_64</NAME>
+      <VERSION>1.5.13-7.el7_2</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A portable foreign function interface library</COMMENTS>
+      <FILESIZE>47766</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>libffi.x86_64</NAME>
+      <VERSION>3.0.13-18.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>gpg(Elasticsearch (Elasticsearch Signing Key) &lt;dev_ops@elasticsearch.org&gt;)</COMMENTS>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:14:36</INSTALLDATE>
+      <NAME>gpg-pubkey.(none)</NAME>
+      <VERSION>d88e42b4-52371eca</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Dynamic library for extended attribute support</COMMENTS>
+      <FILESIZE>19888</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>libattr.x86_64</NAME>
+      <VERSION>2.4.46-12.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Explore and visualize your Elasticsearch data</COMMENTS>
+      <FILESIZE>201826884</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:23:49</INSTALLDATE>
+      <NAME>kibana.x86_64</NAME>
+      <VERSION>5.6.3-1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Dynamic library for access control list support</COMMENTS>
+      <FILESIZE>37056</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>libacl.x86_64</NAME>
+      <VERSION>2.2.51-12.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A GNU tool which simplifies the build process for users</COMMENTS>
+      <FILESIZE>1160684</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:55:51</INSTALLDATE>
+      <NAME>make.x86_64</NAME>
+      <VERSION>3.82-23.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Universally unique ID library</COMMENTS>
+      <FILESIZE>20254</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>libuuid.x86_64</NAME>
+      <VERSION>2.23.2-43.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Guess media type for a file or a URL</COMMENTS>
+      <FILESIZE>62858</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-LWP-MediaTypes.noarch</NAME>
+      <VERSION>6.02-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A library for editing typed command lines</COMMENTS>
+      <FILESIZE>460464</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:58</INSTALLDATE>
+      <NAME>readline.x86_64</NAME>
+      <VERSION>6.2-10.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Determine the locale encoding</COMMENTS>
+      <FILESIZE>18685</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-Encode-Locale.noarch</NAME>
+      <VERSION>1.03-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The GNU version of the awk text processing utility</COMMENTS>
+      <FILESIZE>2435978</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:58</INSTALLDATE>
+      <NAME>gawk.x86_64</NAME>
+      <VERSION>4.0.2-4.el7_3.1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Run Perl standard test scripts with statistics</COMMENTS>
+      <FILESIZE>607239</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-Test-Harness.noarch</NAME>
+      <VERSION>3.28-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>An alternate posix capabilities library</COMMENTS>
+      <FILESIZE>50510</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:58</INSTALLDATE>
+      <NAME>libcap-ng.x86_64</NAME>
+      <VERSION>0.7.5-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Modules that calculate message digests</COMMENTS>
+      <FILESIZE>28661</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-Digest.noarch</NAME>
+      <VERSION>1.17-245.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Library that implements an embeddable SQL database engine</COMMENTS>
+      <FILESIZE>814231</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:58</INSTALLDATE>
+      <NAME>sqlite.x86_64</NAME>
+      <VERSION>3.7.17-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Base class SAX drivers and filters</COMMENTS>
+      <FILESIZE>180558</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-XML-SAX-Base.noarch</NAME>
+      <VERSION>1.08-7.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The GNU versions of find utilities (find and xargs)</COMMENTS>
+      <FILESIZE>1855626</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:58</INSTALLDATE>
+      <NAME>findutils.x86_64</NAME>
+      <VERSION>4.5.11-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A Perl module for time and date manipulation</COMMENTS>
+      <FILESIZE>100194</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-TimeDate.noarch</NAME>
+      <VERSION>2.30-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Parse directory listing</COMMENTS>
+      <FILESIZE>17187</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-File-Listing.noarch</NAME>
+      <VERSION>6.04-7.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>An XML parser library</COMMENTS>
+      <FILESIZE>208315</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:58</INSTALLDATE>
+      <NAME>expat.x86_64</NAME>
+      <VERSION>2.1.0-10.el7_3</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The data pack for Business::ISBN</COMMENTS>
+      <FILESIZE>165294</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-Business-ISBN-Data.noarch</NAME>
+      <VERSION>20120719.001-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Network Security Services Softoken Module</COMMENTS>
+      <FILESIZE>1113662</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:59</INSTALLDATE>
+      <NAME>nss-softokn.x86_64</NAME>
+      <VERSION>3.28.3-8.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A Perl module implementing URI parsing and manipulation</COMMENTS>
+      <FILESIZE>193950</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-URI.noarch</NAME>
+      <VERSION>1.60-9.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Library for loading and sharing PKCS#11 modules</COMMENTS>
+      <FILESIZE>1337825</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:59</INSTALLDATE>
+      <NAME>p11-kit.x86_64</NAME>
+      <VERSION>0.23.5-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl extension for using OpenSSL</COMMENTS>
+      <FILESIZE>1014813</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-Net-SSLeay.x86_64</NAME>
+      <VERSION>1.55-6.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Libraries for applications using libmagic</COMMENTS>
+      <FILESIZE>3077690</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:59</INSTALLDATE>
+      <NAME>file-libs.x86_64</NAME>
+      <VERSION>5.11-33.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl bindings for GNU LibIDN</COMMENTS>
+      <FILESIZE>52037</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-Net-LibIDN.x86_64</NAME>
+      <VERSION>0.12-15.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Utility to set/show the host name or domain name</COMMENTS>
+      <FILESIZE>19449</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:59</INSTALLDATE>
+      <NAME>hostname.x86_64</NAME>
+      <VERSION>3.13-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Low-level interface to bzip2 compression library</COMMENTS>
+      <FILESIZE>57986</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:58</INSTALLDATE>
+      <NAME>perl-Compress-Raw-Bzip2.x86_64</NAME>
+      <VERSION>2.061-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>HTTP style message</COMMENTS>
+      <FILESIZE>162045</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:58</INSTALLDATE>
+      <NAME>perl-HTTP-Message.noarch</NAME>
+      <VERSION>6.06-6.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl module for parsing HTML</COMMENTS>
+      <FILESIZE>229197</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:58</INSTALLDATE>
+      <NAME>perl-HTML-Parser.x86_64</NAME>
+      <VERSION>3.71-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Choose a variant to serve</COMMENTS>
+      <FILESIZE>29259</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:58</INSTALLDATE>
+      <NAME>perl-HTTP-Negotiate.noarch</NAME>
+      <VERSION>6.01-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A GNU file archiving program</COMMENTS>
+      <FILESIZE>2838080</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:00</INSTALLDATE>
+      <NAME>tar.x86_64</NAME>
+      <VERSION>1.26-32.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Linux PCI library</COMMENTS>
+      <FILESIZE>72691</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:58</INSTALLDATE>
+      <NAME>pciutils-libs.x86_64</NAME>
+      <VERSION>3.5.1-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Collection of simple PIN or passphrase entry dialogs</COMMENTS>
+      <FILESIZE>159929</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:01</INSTALLDATE>
+      <NAME>pinentry.x86_64</NAME>
+      <VERSION>0.8.1-17.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>An object-oriented approach to text processing</COMMENTS>
+      <FILESIZE>375948</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>pyparsing.noarch</NAME>
+      <VERSION>1.5.6-9.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Command line tools for managing Berkeley DB databases</COMMENTS>
+      <FILESIZE>326403</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:01</INSTALLDATE>
+      <NAME>libdb-utils.x86_64</NAME>
+      <VERSION>5.3.21-20.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl module for parsing XML documents</COMMENTS>
+      <FILESIZE>642973</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>perl-XML-Parser.x86_64</NAME>
+      <VERSION>2.41-10.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Command line interface parsing library</COMMENTS>
+      <FILESIZE>73009</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:01</INSTALLDATE>
+      <NAME>libss.x86_64</NAME>
+      <VERSION>1.42.9-10.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Module and a script for converting Perl XS code into C code</COMMENTS>
+      <FILESIZE>178634</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>perl-ExtUtils-ParseXS.noarch</NAME>
+      <VERSION>3.18-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Default yama attach scope sysctl setting</COMMENTS>
+      <FILESIZE>1810</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:01</INSTALLDATE>
+      <NAME>elfutils-default-yama-scope.noarch</NAME>
+      <VERSION>0.168-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Install files from here to there</COMMENTS>
+      <FILESIZE>76408</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>perl-ExtUtils-Install.noarch</NAME>
+      <VERSION>1.58-292.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Ncurses support utilities</COMMENTS>
+      <FILESIZE>439378</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:01</INSTALLDATE>
+      <NAME>ncurses.x86_64</NAME>
+      <VERSION>5.9-14.20130511.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Drop-in replacement for IO::Socket::INET supporting both IPv4 and IPv6</COMMENTS>
+      <FILESIZE>85785</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>perl-IO-Socket-IP.noarch</NAME>
+      <VERSION>0.21-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A GNU arbitrary precision library</COMMENTS>
+      <FILESIZE>657046</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:01</INSTALLDATE>
+      <NAME>gmp.x86_64</NAME>
+      <VERSION>6.0.0-15.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Low-level HTTP connection (client)</COMMENTS>
+      <FILESIZE>52165</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>perl-Net-HTTP.noarch</NAME>
+      <VERSION>6.06-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>SAX parser access API for Perl</COMMENTS>
+      <FILESIZE>128286</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>perl-XML-SAX.noarch</NAME>
+      <VERSION>0.99-9.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>SELinux binary policy manipulation library</COMMENTS>
+      <FILESIZE>280833</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:01</INSTALLDATE>
+      <NAME>libsemanage.x86_64</NAME>
+      <VERSION>2.5-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>PCI bus related utilities</COMMENTS>
+      <FILESIZE>200400</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>pciutils.x86_64</NAME>
+      <VERSION>3.5.1-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The ASN.1 library used in GNUTLS</COMMENTS>
+      <FILESIZE>424486</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:02</INSTALLDATE>
+      <NAME>libtasn1.x86_64</NAME>
+      <VERSION>4.10-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Crypt::SSLeay - OpenSSL glue that provides LWP https support</COMMENTS>
+      <FILESIZE>111751</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:01</INSTALLDATE>
+      <NAME>perl-Crypt-SSLeay.x86_64</NAME>
+      <VERSION>0.64-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The Mozilla CA root certificate bundle</COMMENTS>
+      <FILESIZE>1241960</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:02</INSTALLDATE>
+      <NAME>ca-certificates.noarch</NAME>
+      <VERSION>2017.2.14-71.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A general purpose cryptography library with TLS implementation</COMMENTS>
+      <FILESIZE>3199756</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:03</INSTALLDATE>
+      <NAME>openssl-libs.x86_64</NAME>
+      <VERSION>1.0.2k-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Block device ID library</COMMENTS>
+      <FILESIZE>261685</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:03</INSTALLDATE>
+      <NAME>libblkid.x86_64</NAME>
+      <VERSION>2.23.2-43.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Device mounting library</COMMENTS>
+      <FILESIZE>269765</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:04</INSTALLDATE>
+      <NAME>libmount.x86_64</NAME>
+      <VERSION>2.23.2-43.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Shared MIME information database</COMMENTS>
+      <FILESIZE>2379317</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:04</INSTALLDATE>
+      <NAME>shared-mime-info.x86_64</NAME>
+      <VERSION>1.8-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A password-checking library</COMMENTS>
+      <FILESIZE>209610</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:04</INSTALLDATE>
+      <NAME>cracklib.x86_64</NAME>
+      <VERSION>2.9.0-11.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A library for password generation and password quality checking</COMMENTS>
+      <FILESIZE>332381</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:05</INSTALLDATE>
+      <NAME>libpwquality.x86_64</NAME>
+      <VERSION>1.2.3-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>systemd libraries</COMMENTS>
+      <FILESIZE>1075488</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:05</INSTALLDATE>
+      <NAME>systemd-libs.x86_64</NAME>
+      <VERSION>219-42.el7_4.1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A tool for determining compilation options</COMMENTS>
+      <FILESIZE>105522</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:05</INSTALLDATE>
+      <NAME>pkgconfig.x86_64</NAME>
+      <VERSION>0.27.1-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>GLib bindings for D-Bus</COMMENTS>
+      <FILESIZE>301237</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:05</INSTALLDATE>
+      <NAME>dbus-glib.x86_64</NAME>
+      <VERSION>0.100-7.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A GNU collection of binary utilities</COMMENTS>
+      <FILESIZE>23170935</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:07</INSTALLDATE>
+      <NAME>binutils.x86_64</NAME>
+      <VERSION>2.25.1-32.base.el7_4.1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Network Security Services</COMMENTS>
+      <FILESIZE>2501957</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:08</INSTALLDATE>
+      <NAME>nss.x86_64</NAME>
+      <VERSION>3.28.4-11.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Tools for the Network Security Services</COMMENTS>
+      <FILESIZE>1990673</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:08</INSTALLDATE>
+      <NAME>nss-tools.x86_64</NAME>
+      <VERSION>3.28.4-11.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A utility for getting files from remote servers (FTP, HTTP, and others)</COMMENTS>
+      <FILESIZE>540028</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:08</INSTALLDATE>
+      <NAME>curl.x86_64</NAME>
+      <VERSION>7.29.0-42.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The RPM package management system</COMMENTS>
+      <FILESIZE>2621855</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:08</INSTALLDATE>
+      <NAME>rpm.x86_64</NAME>
+      <VERSION>4.11.3-25.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A user and group account administration library</COMMENTS>
+      <FILESIZE>1954088</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:09</INSTALLDATE>
+      <NAME>libuser.x86_64</NAME>
+      <VERSION>0.60-7.el7_1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Create a tree of hardlinks</COMMENTS>
+      <FILESIZE>16545</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:09</INSTALLDATE>
+      <NAME>hardlink.x86_64</NAME>
+      <VERSION>1.0-19.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>QR Code encoding library - Shared libraries</COMMENTS>
+      <FILESIZE>126732</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:09</INSTALLDATE>
+      <NAME>qrencode-libs.x86_64</NAME>
+      <VERSION>3.4.1-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Device mapper utility</COMMENTS>
+      <FILESIZE>329944</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:09</INSTALLDATE>
+      <NAME>device-mapper.x86_64</NAME>
+      <VERSION>1.02.140-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Cryptsetup shared library</COMMENTS>
+      <FILESIZE>969900</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:09</INSTALLDATE>
+      <NAME>cryptsetup-libs.x86_64</NAME>
+      <VERSION>1.7.4-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Linux kernel module management utilities</COMMENTS>
+      <FILESIZE>244908</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:10</INSTALLDATE>
+      <NAME>kmod.x86_64</NAME>
+      <VERSION>20-15.el7_4.2</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>D-BUS message bus</COMMENTS>
+      <FILESIZE>875656</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:12</INSTALLDATE>
+      <NAME>dbus.x86_64</NAME>
+      <VERSION>1.6.12-17.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A GNU set of database routines which use extensible hashing</COMMENTS>
+      <FILESIZE>184322</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:12</INSTALLDATE>
+      <NAME>gdbm.x86_64</NAME>
+      <VERSION>1.10-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>An interpreted, interactive, object-oriented programming language</COMMENTS>
+      <FILESIZE>80827</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:14</INSTALLDATE>
+      <NAME>python.x86_64</NAME>
+      <VERSION>2.7.5-58.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>D-Bus Python Bindings</COMMENTS>
+      <FILESIZE>848122</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:14</INSTALLDATE>
+      <NAME>dbus-python.x86_64</NAME>
+      <VERSION>1.1.1-9.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Python bindings for lzma</COMMENTS>
+      <FILESIZE>190112</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:14</INSTALLDATE>
+      <NAME>pyliblzma.x86_64</NAME>
+      <VERSION>0.5.3-11.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A fast metadata parser for yum</COMMENTS>
+      <FILESIZE>58789</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:14</INSTALLDATE>
+      <NAME>yum-metadata-parser.x86_64</NAME>
+      <VERSION>1.1.4-10.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A high-level cross-protocol url-grabber</COMMENTS>
+      <FILESIZE>500670</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:14</INSTALLDATE>
+      <NAME>python-urlgrabber.noarch</NAME>
+      <VERSION>3.10-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Extended attributes library wrapper for Python</COMMENTS>
+      <FILESIZE>63304</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:15</INSTALLDATE>
+      <NAME>pyxattr.x86_64</NAME>
+      <VERSION>0.5.1-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Small, useful pieces of code to make python coding easier</COMMENTS>
+      <FILESIZE>1465161</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:15</INSTALLDATE>
+      <NAME>python-kitchen.noarch</NAME>
+      <VERSION>1.1.1-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Utility for secure communication and data storage</COMMENTS>
+      <FILESIZE>6644890</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:15</INSTALLDATE>
+      <NAME>gnupg2.x86_64</NAME>
+      <VERSION>2.0.22-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Python module for working with OpenPGP messages</COMMENTS>
+      <FILESIZE>197501</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:15</INSTALLDATE>
+      <NAME>pygpgme.x86_64</NAME>
+      <VERSION>0.3-9.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Python bindings for apps which will manipulate RPM packages</COMMENTS>
+      <FILESIZE>148849</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:15</INSTALLDATE>
+      <NAME>rpm-python.x86_64</NAME>
+      <VERSION>4.11.3-25.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>RPM package installer/updater/manager</COMMENTS>
+      <FILESIZE>5803844</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:16</INSTALLDATE>
+      <NAME>yum.noarch</NAME>
+      <VERSION>3.4.3-154.el7.centos</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Yum plugin to work around overlayfs issues</COMMENTS>
+      <FILESIZE>22399</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:29</INSTALLDATE>
+      <NAME>yum-plugin-ovl.noarch</NAME>
+      <VERSION>1.1.31-42.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>An utility for setting or changing passwords using PAM</COMMENTS>
+      <FILESIZE>429874</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:29</INSTALLDATE>
+      <NAME>passwd.x86_64</NAME>
+      <VERSION>0.79-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A minimal version of the VIM editor</COMMENTS>
+      <FILESIZE>917704</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:29</INSTALLDATE>
+      <NAME>vim-minimal.x86_64</NAME>
+      <VERSION>7.4.160-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>gpg(CentOS-7 Key (CentOS 7 Official Signing Key) &lt;security@centos.org&gt;)</COMMENTS>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:44:02</INSTALLDATE>
+      <NAME>gpg-pubkey.(none)</NAME>
+      <VERSION>f4a80eb5-53a7ff4b</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Library files for fipscheck</COMMENTS>
+      <FILESIZE>11466</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:10</INSTALLDATE>
+      <NAME>fipscheck-lib.x86_64</NAME>
+      <VERSION>1.4.1-6.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Cron daemon for executing programs at set times</COMMENTS>
+      <FILESIZE>220388</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:11</INSTALLDATE>
+      <NAME>cronie.x86_64</NAME>
+      <VERSION>1.4.11-17.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Utility for running regular jobs</COMMENTS>
+      <FILESIZE>41611</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:11</INSTALLDATE>
+      <NAME>cronie-anacron.x86_64</NAME>
+      <VERSION>1.4.11-17.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A minimalistic Netlink library</COMMENTS>
+      <FILESIZE>51847</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:11</INSTALLDATE>
+      <NAME>libmnl.x86_64</NAME>
+      <VERSION>1.0.3-7.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Tools for managing Linux kernel packet filtering capabilities</COMMENTS>
+      <FILESIZE>1556293</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:11</INSTALLDATE>
+      <NAME>iptables.x86_64</NAME>
+      <VERSION>1.4.21-18.2.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The NetBSD Editline library</COMMENTS>
+      <FILESIZE>244257</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:11</INSTALLDATE>
+      <NAME>libedit.x86_64</NAME>
+      <VERSION>3.0-12.20121213cvs.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Parts of the groff formatting system required to display manual pages</COMMENTS>
+      <FILESIZE>3453946</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>groff-base.x86_64</NAME>
+      <VERSION>1.22.2-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Small, simple, correct HTTP/1.1 client</COMMENTS>
+      <FILESIZE>97210</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-HTTP-Tiny.noarch</NAME>
+      <VERSION>0.033-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Look up Perl documentation in Pod format</COMMENTS>
+      <FILESIZE>166910</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Pod-Perldoc.noarch</NAME>
+      <VERSION>3.20-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Parse text into an array of tokens or array of arrays</COMMENTS>
+      <FILESIZE>16431</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Text-ParseWords.noarch</NAME>
+      <VERSION>3.29-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Print a usage message from embedded POD documentation</COMMENTS>
+      <FILESIZE>44671</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Pod-Usage.noarch</NAME>
+      <VERSION>1.63-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The libraries for the perl runtime</COMMENTS>
+      <FILESIZE>1647272</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-libs.x86_64</NAME>
+      <VERSION>5.16.3-292.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Implements default import method for modules</COMMENTS>
+      <FILESIZE>56612</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Exporter.noarch</NAME>
+      <VERSION>5.68-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Alternative warn and die for modules</COMMENTS>
+      <FILESIZE>28276</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Carp.noarch</NAME>
+      <VERSION>1.26-244.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A selection of general-utility scalar and list subroutines</COMMENTS>
+      <FILESIZE>67994</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Scalar-List-Utils.x86_64</NAME>
+      <VERSION>1.27-248.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Efficiently compute time from local and GMT time</COMMENTS>
+      <FILESIZE>44062</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Time-Local.noarch</NAME>
+      <VERSION>1.2300-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Return name and handle of a temporary file safely</COMMENTS>
+      <FILESIZE>158781</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-File-Temp.noarch</NAME>
+      <VERSION>0.23.01-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl extension for sharing data structures between threads</COMMENTS>
+      <FILESIZE>73972</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-threads-shared.x86_64</NAME>
+      <VERSION>1.43-6.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl source filters</COMMENTS>
+      <FILESIZE>148475</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Filter.x86_64</NAME>
+      <VERSION>1.49-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Extended processing of command line options</COMMENTS>
+      <FILESIZE>134846</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Getopt-Long.noarch</NAME>
+      <VERSION>2.40-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Displays where a particular program in your path is located</COMMENTS>
+      <FILESIZE>76962</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:14</INSTALLDATE>
+      <NAME>which.x86_64</NAME>
+      <VERSION>2.20-7.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Libraries for tcp_wrappers</COMMENTS>
+      <FILESIZE>134602</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:14</INSTALLDATE>
+      <NAME>tcp_wrappers-libs.x86_64</NAME>
+      <VERSION>7.6-77.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The common files needed by any version of the VIM editor</COMMENTS>
+      <FILESIZE>22146173</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:15</INSTALLDATE>
+      <NAME>vim-common.x86_64</NAME>
+      <VERSION>7.4.160-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>An open source SSH server daemon</COMMENTS>
+      <FILESIZE>993794</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:15</INSTALLDATE>
+      <NAME>openssh-server.x86_64</NAME>
+      <VERSION>7.4p1-13.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>An open source SSH client applications</COMMENTS>
+      <FILESIZE>2647536</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:15</INSTALLDATE>
+      <NAME>openssh-clients.x86_64</NAME>
+      <VERSION>7.4p1-13.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A utility for retrieving files using the HTTP or FTP protocols</COMMENTS>
+      <FILESIZE>2055533</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:16</INSTALLDATE>
+      <NAME>wget.x86_64</NAME>
+      <VERSION>1.14-15.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Apache Portable Runtime Utility library</COMMENTS>
+      <FILESIZE>198751</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:53:39</INSTALLDATE>
+      <NAME>apr-util.x86_64</NAME>
+      <VERSION>1.5.2-6.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>CentOS-related icons and pictures</COMMENTS>
+      <FILESIZE>22548401</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:53:40</INSTALLDATE>
+      <NAME>centos-logos.noarch</NAME>
+      <VERSION>70.0.6-3.el7.centos</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Apache HTTP Server</COMMENTS>
+      <FILESIZE>9827789</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:53:40</INSTALLDATE>
+      <NAME>httpd.x86_64</NAME>
+      <VERSION>2.4.6-67.el7.centos.6</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A text file browser similar to more, but better</COMMENTS>
+      <FILESIZE>215376</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:58:36</INSTALLDATE>
+      <NAME>less.x86_64</NAME>
+      <VERSION>458-9.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Framework for managing passwords and other secrets</COMMENTS>
+      <FILESIZE>306231</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:58:36</INSTALLDATE>
+      <NAME>libgnome-keyring.x86_64</NAME>
+      <VERSION>3.12.0-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl interface to Git</COMMENTS>
+      <FILESIZE>58567</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:58:36</INSTALLDATE>
+      <NAME>perl-Git.noarch</NAME>
+      <VERSION>1.8.3.1-12.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A C library for multiple-precision floating-point computations</COMMENTS>
+      <FILESIZE>554279</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:04:44</INSTALLDATE>
+      <NAME>mpfr.x86_64</NAME>
+      <VERSION>3.1.1-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The C Preprocessor</COMMENTS>
+      <FILESIZE>15648853</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:04:45</INSTALLDATE>
+      <NAME>cpp.x86_64</NAME>
+      <VERSION>4.8.5-16.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Header files for the Linux kernel for use by glibc</COMMENTS>
+      <FILESIZE>3664614</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:04:46</INSTALLDATE>
+      <NAME>kernel-headers.x86_64</NAME>
+      <VERSION>3.10.0-693.5.2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Object files for development using standard C libraries.</COMMENTS>
+      <FILESIZE>1066324</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:04:46</INSTALLDATE>
+      <NAME>glibc-devel.x86_64</NAME>
+      <VERSION>2.17-196.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A free and portable font rendering engine</COMMENTS>
+      <FILESIZE>898651</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:53</INSTALLDATE>
+      <NAME>freetype.x86_64</NAME>
+      <VERSION>2.4.11-15.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>GCC version 4.8 shared support library</COMMENTS>
+      <FILESIZE>179272</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:49</INSTALLDATE>
+      <NAME>libgcc.x86_64</NAME>
+      <VERSION>4.8.5-16.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Library providing the Gnome XSLT engine</COMMENTS>
+      <FILESIZE>497582</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:53</INSTALLDATE>
+      <NAME>libxslt.x86_64</NAME>
+      <VERSION>1.1.28-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A set of system configuration and setup files</COMMENTS>
+      <FILESIZE>696715</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:49</INSTALLDATE>
+      <NAME>setup.noarch</NAME>
+      <VERSION>2.8.71-7.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A MMX/SSE2 accelerated library for manipulating JPEG image files</COMMENTS>
+      <FILESIZE>350387</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:53</INSTALLDATE>
+      <NAME>libjpeg-turbo.x86_64</NAME>
+      <VERSION>1.2.90-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>License of the BIND DNS suite</COMMENTS>
+      <FILESIZE>26831</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:49</INSTALLDATE>
+      <NAME>bind-license.noarch</NAME>
+      <VERSION>9.9.4-51.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>X.Org X11 SM runtime library</COMMENTS>
+      <FILESIZE>81546</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:54</INSTALLDATE>
+      <NAME>libSM.x86_64</NAME>
+      <VERSION>1.2.2-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Descriptions of common terminals</COMMENTS>
+      <FILESIZE>223432</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:49</INSTALLDATE>
+      <NAME>ncurses-base.noarch</NAME>
+      <VERSION>5.9-14.20130511.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Font configuration and customization library</COMMENTS>
+      <FILESIZE>578056</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:54</INSTALLDATE>
+      <NAME>fontconfig.x86_64</NAME>
+      <VERSION>2.10.95-11.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Timezone data</COMMENTS>
+      <FILESIZE>1789861</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:50</INSTALLDATE>
+      <NAME>tzdata.noarch</NAME>
+      <VERSION>2017b-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Module for handling various files for Java packaging</COMMENTS>
+      <FILESIZE>66505</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:55</INSTALLDATE>
+      <NAME>python-javapackages.noarch</NAME>
+      <VERSION>3.4.1-11.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Common binaries and locale data for glibc</COMMENTS>
+      <FILESIZE>120296447</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:54</INSTALLDATE>
+      <NAME>glibc-common.x86_64</NAME>
+      <VERSION>2.17-196.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>X.Org X11 libXfont runtime library</COMMENTS>
+      <FILESIZE>347614</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:55</INSTALLDATE>
+      <NAME>libXfont.x86_64</NAME>
+      <VERSION>1.5.2-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Netscape Portable Runtime</COMMENTS>
+      <FILESIZE>287576</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:56</INSTALLDATE>
+      <NAME>nspr.x86_64</NAME>
+      <VERSION>4.13.1-1.0.el7_3</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Utility to create fonts.scale files for truetype fonts</COMMENTS>
+      <FILESIZE>105418</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:55</INSTALLDATE>
+      <NAME>ttmkfdir.x86_64</NAME>
+      <VERSION>3.0.9-42.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Ncurses libraries</COMMENTS>
+      <FILESIZE>1028216</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:56</INSTALLDATE>
+      <NAME>ncurses-libs.x86_64</NAME>
+      <VERSION>5.9-14.20130511.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The Advanced Linux Sound Architecture (ALSA) library</COMMENTS>
+      <FILESIZE>1423581</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:57</INSTALLDATE>
+      <NAME>alsa-lib.x86_64</NAME>
+      <VERSION>1.1.3-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>SELinux binary policy manipulation library</COMMENTS>
+      <FILESIZE>661232</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:56</INSTALLDATE>
+      <NAME>libsepol.x86_64</NAME>
+      <VERSION>2.5-6.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A C binding to the X11 protocol</COMMENTS>
+      <FILESIZE>1005512</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:57</INSTALLDATE>
+      <NAME>libxcb.x86_64</NAME>
+      <VERSION>1.12-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>SELinux library and simple utilities</COMMENTS>
+      <FILESIZE>217762</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:56</INSTALLDATE>
+      <NAME>libselinux.x86_64</NAME>
+      <VERSION>2.5-11.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Core X11 protocol client library</COMMENTS>
+      <FILESIZE>1325720</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:57</INSTALLDATE>
+      <NAME>libX11.x86_64</NAME>
+      <VERSION>1.6.5-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A stand-alone TTY-based reader for GNU texinfo documentation</COMMENTS>
+      <FILESIZE>494499</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:56</INSTALLDATE>
+      <NAME>info.x86_64</NAME>
+      <VERSION>5.1-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>X.Org X11 libXi runtime library</COMMENTS>
+      <FILESIZE>70019</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:57</INSTALLDATE>
+      <NAME>libXi.x86_64</NAME>
+      <VERSION>1.7.9-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Libraries for applications using bzip2</COMMENTS>
+      <FILESIZE>70093</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>bzip2-libs.x86_64</NAME>
+      <VERSION>1.0.6-13.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Library for manipulating GIF format image files</COMMENTS>
+      <FILESIZE>90124</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:57</INSTALLDATE>
+      <NAME>giflib.x86_64</NAME>
+      <VERSION>4.1.6-9.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The Berkeley DB database library for C</COMMENTS>
+      <FILESIZE>1858000</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>libdb.x86_64</NAME>
+      <VERSION>5.3.21-20.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>X Composite Extension library</COMMENTS>
+      <FILESIZE>35184</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:57</INSTALLDATE>
+      <NAME>libXcomposite.x86_64</NAME>
+      <VERSION>0.4.4-4.1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A system tool for maintaining the /etc/rc*.d hierarchy</COMMENTS>
+      <FILESIZE>779531</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>chkconfig.x86_64</NAME>
+      <VERSION>1.7.4-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>User-space access to Linux Kernel SCTP</COMMENTS>
+      <FILESIZE>232487</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:13:58</INSTALLDATE>
+      <NAME>lksctp-tools.x86_64</NAME>
+      <VERSION>1.0.17-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Network Security Services Utilities Library</COMMENTS>
+      <FILESIZE>186216</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>nss-util.x86_64</NAME>
+      <VERSION>3.28.4-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>OpenJDK Runtime Environment</COMMENTS>
+      <FILESIZE>108311046</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:14:02</INSTALLDATE>
+      <NAME>java-1.8.0-openjdk-headless.x86_64</NAME>
+      <VERSION>1.8.0.151-1.b12.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Library providing XML and HTML support</COMMENTS>
+      <FILESIZE>1710062</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>libxml2.x86_64</NAME>
+      <VERSION>2.9.1-6.el7_2.3</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>OpenJDK Runtime Environment</COMMENTS>
+      <FILESIZE>512578</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:14:02</INSTALLDATE>
+      <NAME>java-1.8.0-openjdk.x86_64</NAME>
+      <VERSION>1.8.0.151-1.b12.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Library for error values used by GnuPG components</COMMENTS>
+      <FILESIZE>350865</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>libgpg-error.x86_64</NAME>
+      <VERSION>1.12-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Elasticsearch is a distributed RESTful search engine built for the cloud. Reference documentation can be found at https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html and the 'Elasticsearch: The Definitive Guide' book can be found at https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html</COMMENTS>
+      <FILESIZE>37629192</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:17:52</INSTALLDATE>
+      <NAME>elasticsearch.noarch</NAME>
+      <VERSION>5.6.3-1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Library for getting and setting POSIX.1e capabilities</COMMENTS>
+      <FILESIZE>111445</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>libcap.x86_64</NAME>
+      <VERSION>2.22-9.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Allows restricted root access for specified users</COMMENTS>
+      <FILESIZE>4051627</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:52:08</INSTALLDATE>
+      <NAME>sudo.x86_64</NAME>
+      <VERSION>1.8.19p2-11.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Pattern matching utilities</COMMENTS>
+      <FILESIZE>1195131</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>grep.x86_64</NAME>
+      <VERSION>2.20-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Low-level interface to the zlib compression library</COMMENTS>
+      <FILESIZE>139803</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:56</INSTALLDATE>
+      <NAME>perl-Compress-Raw-Zlib.x86_64</NAME>
+      <VERSION>2.061-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A general-purpose cryptography library</COMMENTS>
+      <FILESIZE>597727</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:57</INSTALLDATE>
+      <NAME>libgcrypt.x86_64</NAME>
+      <VERSION>1.5.3-14.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Stringify perl data structures, suitable for printing and eval</COMMENTS>
+      <FILESIZE>99287</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-Data-Dumper.x86_64</NAME>
+      <VERSION>2.145-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Powerful light-weight programming language</COMMENTS>
+      <FILESIZE>640319</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:58</INSTALLDATE>
+      <NAME>lua.x86_64</NAME>
+      <VERSION>5.1.4-15.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A simple generic namespace support class</COMMENTS>
+      <FILESIZE>28981</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-XML-NamespaceSupport.noarch</NAME>
+      <VERSION>1.11-10.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A GNU archiving program</COMMENTS>
+      <FILESIZE>684486</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:58</INSTALLDATE>
+      <NAME>cpio.x86_64</NAME>
+      <VERSION>2.11-25.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>HTML::Tagset - data tables useful in parsing HTML</COMMENTS>
+      <FILESIZE>19784</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-HTML-Tagset.noarch</NAME>
+      <VERSION>3.20-15.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Dynamic library for libaudit</COMMENTS>
+      <FILESIZE>247962</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:58</INSTALLDATE>
+      <NAME>audit-libs.x86_64</NAME>
+      <VERSION>2.7.6-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl interface to the MD5 algorithm</COMMENTS>
+      <FILESIZE>55715</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-Digest-MD5.x86_64</NAME>
+      <VERSION>2.52-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Internationalized Domain Name support library</COMMENTS>
+      <FILESIZE>630407</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:58</INSTALLDATE>
+      <NAME>libidn.x86_64</NAME>
+      <VERSION>1.28-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Open an HTML file with automatic character set detection</COMMENTS>
+      <FILESIZE>43639</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-IO-HTML.noarch</NAME>
+      <VERSION>1.00-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A GNU collection of diff utilities</COMMENTS>
+      <FILESIZE>1065157</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:58</INSTALLDATE>
+      <NAME>diffutils.x86_64</NAME>
+      <VERSION>3.3-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Date conversion routines</COMMENTS>
+      <FILESIZE>20167</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-HTTP-Date.noarch</NAME>
+      <VERSION>6.02-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Utilities from the general purpose cryptography library with TLS implementation</COMMENTS>
+      <FILESIZE>833715</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>openssl.x86_64</NAME>
+      <VERSION>1.0.2k-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Libraries for accessing D-BUS</COMMENTS>
+      <FILESIZE>304576</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:59</INSTALLDATE>
+      <NAME>dbus-libs.x86_64</NAME>
+      <VERSION>1.6.12-17.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl module to work with International Standard Book Numbers</COMMENTS>
+      <FILESIZE>39822</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-Business-ISBN.noarch</NAME>
+      <VERSION>2.06-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>GnuPG IPC library</COMMENTS>
+      <FILESIZE>155391</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:59</INSTALLDATE>
+      <NAME>libassuan.x86_64</NAME>
+      <VERSION>2.1.0-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Database of robots.txt-derived permissions</COMMENTS>
+      <FILESIZE>26778</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>perl-WWW-RobotRules.noarch</NAME>
+      <VERSION>6.02-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>LZMA compression utilities</COMMENTS>
+      <FILESIZE>798130</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:59</INSTALLDATE>
+      <NAME>xz.x86_64</NAME>
+      <VERSION>5.2.2-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Enhanced implementation of the mailx command</COMMENTS>
+      <FILESIZE>477293</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>mailx.x86_64</NAME>
+      <VERSION>12.5-16.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Hardware identification and configuration data</COMMENTS>
+      <FILESIZE>12956704</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:57</INSTALLDATE>
+      <NAME>hwdata.x86_64</NAME>
+      <VERSION>0.252-8.6.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Key utilities library</COMMENTS>
+      <FILESIZE>42138</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:59</INSTALLDATE>
+      <NAME>keyutils-libs.x86_64</NAME>
+      <VERSION>1.5.8-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Read and write compressed data</COMMENTS>
+      <FILESIZE>814173</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:58</INSTALLDATE>
+      <NAME>perl-IO-Compress.noarch</NAME>
+      <VERSION>2.061-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>HTTP cookie jars</COMMENTS>
+      <FILESIZE>47180</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:58</INSTALLDATE>
+      <NAME>perl-HTTP-Cookies.noarch</NAME>
+      <VERSION>6.01-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Simple HTTP server class</COMMENTS>
+      <FILESIZE>40152</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:58</INSTALLDATE>
+      <NAME>perl-HTTP-Daemon.noarch</NAME>
+      <VERSION>6.01-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Access control list utilities</COMMENTS>
+      <FILESIZE>201066</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:51:59</INSTALLDATE>
+      <NAME>acl.x86_64</NAME>
+      <VERSION>2.2.51-12.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>C development files for the Berkeley DB library</COMMENTS>
+      <FILESIZE>129076</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:58</INSTALLDATE>
+      <NAME>libdb-devel.x86_64</NAME>
+      <VERSION>5.3.21-20.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Development libraries and header files for the gdbm library</COMMENTS>
+      <FILESIZE>42866</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:04:59</INSTALLDATE>
+      <NAME>gdbm-devel.x86_64</NAME>
+      <VERSION>1.10-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Shared libraries needed by applications which use Cyrus SASL</COMMENTS>
+      <FILESIZE>396919</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:01</INSTALLDATE>
+      <NAME>cyrus-sasl-lib.x86_64</NAME>
+      <VERSION>2.1.26-21.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Static probe support tools</COMMENTS>
+      <FILESIZE>174337</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>systemtap-sdt-devel.x86_64</NAME>
+      <VERSION>3.1-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Utilities to write and check a MANIFEST file</COMMENTS>
+      <FILESIZE>85359</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>perl-ExtUtils-Manifest.noarch</NAME>
+      <VERSION>1.61-244.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Libraries to handle kernel module loading and unloading</COMMENTS>
+      <FILESIZE>91800</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:01</INSTALLDATE>
+      <NAME>kmod-libs.x86_64</NAME>
+      <VERSION>20-15.el7_4.2</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Header #files for use in perl development</COMMENTS>
+      <FILESIZE>1929660</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>perl-devel.x86_64</NAME>
+      <VERSION>5.16.3-292.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Libraries to handle compiled objects</COMMENTS>
+      <FILESIZE>735095</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:01</INSTALLDATE>
+      <NAME>elfutils-libs.x86_64</NAME>
+      <VERSION>0.168-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Create a module Makefile</COMMENTS>
+      <FILESIZE>650532</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>perl-ExtUtils-MakeMaker.noarch</NAME>
+      <VERSION>6.68-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl library for transparent SSL</COMMENTS>
+      <FILESIZE>220327</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>perl-IO-Socket-SSL.noarch</NAME>
+      <VERSION>1.94-6.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A Perl interface to the World-Wide Web</COMMENTS>
+      <FILESIZE>498456</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>perl-libwww-perl.noarch</NAME>
+      <VERSION>6.05-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>String library, very low memory overhead, simple to import</COMMENTS>
+      <FILESIZE>285943</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:01</INSTALLDATE>
+      <NAME>ustr.x86_64</NAME>
+      <VERSION>1.0.4-16.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Easy API to maintain XML in Perl</COMMENTS>
+      <FILESIZE>160004</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>perl-XML-Simple.noarch</NAME>
+      <VERSION>2.20-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Main loop abstraction library</COMMENTS>
+      <FILESIZE>23060</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:01</INSTALLDATE>
+      <NAME>libverto.x86_64</NAME>
+      <VERSION>0.2.5-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Tools for monitoring SMART capable hard disks</COMMENTS>
+      <FILESIZE>1625448</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:00</INSTALLDATE>
+      <NAME>smartmontools.x86_64</NAME>
+      <VERSION>6.2-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>System trust module from p11-kit</COMMENTS>
+      <FILESIZE>437261</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:02</INSTALLDATE>
+      <NAME>p11-kit-trust.x86_64</NAME>
+      <VERSION>0.23.5-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl interface to the UNIX syslog(3) calls</COMMENTS>
+      <FILESIZE>95315</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-25 00:05:01</INSTALLDATE>
+      <NAME>perl-Sys-Syslog.x86_64</NAME>
+      <VERSION>0.33-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A set of basic GNU tools commonly used in shell scripts</COMMENTS>
+      <FILESIZE>14589167</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:03</INSTALLDATE>
+      <NAME>coreutils.x86_64</NAME>
+      <VERSION>8.22-18.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The non-admin shared libraries used by Kerberos 5</COMMENTS>
+      <FILESIZE>1988838</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:03</INSTALLDATE>
+      <NAME>krb5-libs.x86_64</NAME>
+      <VERSION>1.15.1-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Utilities for managing accounts and shadow password files</COMMENTS>
+      <FILESIZE>3534490</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:04</INSTALLDATE>
+      <NAME>shadow-utils.x86_64</NAME>
+      <VERSION>4.1.5.1-24.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A library of handy utility functions</COMMENTS>
+      <FILESIZE>11675108</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:04</INSTALLDATE>
+      <NAME>glib2.x86_64</NAME>
+      <VERSION>2.50.3-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The GNU data compression program</COMMENTS>
+      <FILESIZE>250054</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:04</INSTALLDATE>
+      <NAME>gzip.x86_64</NAME>
+      <VERSION>1.5-9.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The standard CrackLib dictionaries</COMMENTS>
+      <FILESIZE>9389116</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:05</INSTALLDATE>
+      <NAME>cracklib-dicts.x86_64</NAME>
+      <VERSION>2.9.0-11.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>An extensible library which provides authentication for applications</COMMENTS>
+      <FILESIZE>2625254</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:05</INSTALLDATE>
+      <NAME>pam.x86_64</NAME>
+      <VERSION>1.1.8-18.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>System and process monitoring utilities</COMMENTS>
+      <FILESIZE>759252</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:05</INSTALLDATE>
+      <NAME>procps-ng.x86_64</NAME>
+      <VERSION>3.3.10-16.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Introspection system for GObject-based libraries</COMMENTS>
+      <FILESIZE>834149</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:05</INSTALLDATE>
+      <NAME>gobject-introspection.x86_64</NAME>
+      <VERSION>1.50.0-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A privileged helper for utmp/wtmp updates</COMMENTS>
+      <FILESIZE>49749</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:05</INSTALLDATE>
+      <NAME>libutempter.x86_64</NAME>
+      <VERSION>1.1.6-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A library implementing the SSH2 protocol</COMMENTS>
+      <FILESIZE>341782</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:06</INSTALLDATE>
+      <NAME>libssh2.x86_64</NAME>
+      <VERSION>1.4.3-10.el7_2.1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>PEM file reader for Network Security Services (NSS)</COMMENTS>
+      <FILESIZE>201219</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:07</INSTALLDATE>
+      <NAME>nss-pem.x86_64</NAME>
+      <VERSION>1.0.3-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>System NSS Initialization</COMMENTS>
+      <FILESIZE>13979</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:08</INSTALLDATE>
+      <NAME>nss-sysinit.x86_64</NAME>
+      <VERSION>3.28.4-11.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A library for getting files from web servers</COMMENTS>
+      <FILESIZE>435128</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:08</INSTALLDATE>
+      <NAME>libcurl.x86_64</NAME>
+      <VERSION>7.29.0-42.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Libraries for manipulating RPM packages</COMMENTS>
+      <FILESIZE>607176</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:08</INSTALLDATE>
+      <NAME>rpm-libs.x86_64</NAME>
+      <VERSION>4.11.3-25.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>LDAP support libraries</COMMENTS>
+      <FILESIZE>1028725</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:08</INSTALLDATE>
+      <NAME>openldap.x86_64</NAME>
+      <VERSION>2.4.44-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A collection of basic system utilities</COMMENTS>
+      <FILESIZE>8508103</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:09</INSTALLDATE>
+      <NAME>util-linux.x86_64</NAME>
+      <VERSION>2.23.2-43.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Partition device manager for device-mapper devices</COMMENTS>
+      <FILESIZE>37795</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:09</INSTALLDATE>
+      <NAME>kpartx.x86_64</NAME>
+      <VERSION>0.4.9-111.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Device-mapper shared library</COMMENTS>
+      <FILESIZE>400471</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:09</INSTALLDATE>
+      <NAME>device-mapper-libs.x86_64</NAME>
+      <VERSION>1.02.140-8.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Initramfs generator using udev</COMMENTS>
+      <FILESIZE>894781</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:10</INSTALLDATE>
+      <NAME>dracut.x86_64</NAME>
+      <VERSION>033-502.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A System and Service Manager</COMMENTS>
+      <FILESIZE>22003002</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:11</INSTALLDATE>
+      <NAME>systemd.x86_64</NAME>
+      <VERSION>219-42.el7_4.1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Network monitoring tools including ping</COMMENTS>
+      <FILESIZE>343497</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:12</INSTALLDATE>
+      <NAME>iputils.x86_64</NAME>
+      <VERSION>20160308-10.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Runtime libraries for Python</COMMENTS>
+      <FILESIZE>24704505</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:14</INSTALLDATE>
+      <NAME>python-libs.x86_64</NAME>
+      <VERSION>2.7.5-58.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Python Module for Accessing and Modifying Configuration Data in INI files</COMMENTS>
+      <FILESIZE>115166</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:14</INSTALLDATE>
+      <NAME>python-iniparse.noarch</NAME>
+      <VERSION>0.4-9.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A Python interface to libcurl</COMMENTS>
+      <FILESIZE>241513</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:14</INSTALLDATE>
+      <NAME>python-pycurl.x86_64</NAME>
+      <VERSION>7.19.0-19.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Python 2 bindings for GObject Introspection base package</COMMENTS>
+      <FILESIZE>1123114</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:14</INSTALLDATE>
+      <NAME>python-gobject-base.x86_64</NAME>
+      <VERSION>3.22.0-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Python bindings for the libxml2 library</COMMENTS>
+      <FILESIZE>1503050</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:15</INSTALLDATE>
+      <NAME>libxml2-python.x86_64</NAME>
+      <VERSION>2.9.1-6.el7_2.3</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Character encoding auto-detection in Python</COMMENTS>
+      <FILESIZE>1156541</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:15</INSTALLDATE>
+      <NAME>python-chardet.noarch</NAME>
+      <VERSION>2.2.1-1.el7_1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The GNU Portable Threads library</COMMENTS>
+      <FILESIZE>267851</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:15</INSTALLDATE>
+      <NAME>pth.x86_64</NAME>
+      <VERSION>2.0.7-23.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>GnuPG Made Easy - high level crypto API</COMMENTS>
+      <FILESIZE>547534</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:15</INSTALLDATE>
+      <NAME>gpgme.x86_64</NAME>
+      <VERSION>1.3.2-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Libraries for building and signing RPM packages</COMMENTS>
+      <FILESIZE>166656</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:15</INSTALLDATE>
+      <NAME>rpm-build-libs.x86_64</NAME>
+      <VERSION>4.11.3-25.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Yum plugin which chooses fastest repository from a mirrorlist</COMMENTS>
+      <FILESIZE>53903</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:15</INSTALLDATE>
+      <NAME>yum-plugin-fastestmirror.noarch</NAME>
+      <VERSION>1.1.31-42.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Utilities based around the yum package manager</COMMENTS>
+      <FILESIZE>337353</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:28</INSTALLDATE>
+      <NAME>yum-utils.noarch</NAME>
+      <VERSION>1.1.31-42.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>QEMU guest agent</COMMENTS>
+      <FILESIZE>510398</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:29</INSTALLDATE>
+      <NAME>qemu-guest-agent.x86_64</NAME>
+      <VERSION>2.8.0-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The basic required files for the root user's directory</COMMENTS>
+      <FILESIZE>599</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-09-11 15:52:29</INSTALLDATE>
+      <NAME>rootfiles.noarch</NAME>
+      <VERSION>8.1-11.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A library for integrity verification of FIPS validated modules</COMMENTS>
+      <FILESIZE>38839</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:10</INSTALLDATE>
+      <NAME>fipscheck.x86_64</NAME>
+      <VERSION>1.4.1-6.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>An open source implementation of SSH protocol versions 1 and 2</COMMENTS>
+      <FILESIZE>1995388</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:11</INSTALLDATE>
+      <NAME>openssh.x86_64</NAME>
+      <VERSION>7.4p1-13.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Root crontab files used to schedule the execution of programs</COMMENTS>
+      <FILESIZE>3700</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:11</INSTALLDATE>
+      <NAME>crontabs.noarch</NAME>
+      <VERSION>1.11-6.20121102git.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Netfilter netlink userspace library</COMMENTS>
+      <FILESIZE>47123</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:11</INSTALLDATE>
+      <NAME>libnfnetlink.x86_64</NAME>
+      <VERSION>1.0.1-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Netfilter conntrack userspace library</COMMENTS>
+      <FILESIZE>143566</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:11</INSTALLDATE>
+      <NAME>libnetfilter_conntrack.x86_64</NAME>
+      <VERSION>1.0.6-1.el7_3</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Advanced IP routing and network device configuration tools</COMMENTS>
+      <FILESIZE>1505751</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:11</INSTALLDATE>
+      <NAME>iproute.x86_64</NAME>
+      <VERSION>3.10.0-87.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Dynamic library for for the gpm</COMMENTS>
+      <FILESIZE>27736</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:11</INSTALLDATE>
+      <NAME>gpm-libs.x86_64</NAME>
+      <VERSION>1.20.7-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Establish an ISA relationship with base classes at compile time</COMMENTS>
+      <FILESIZE>8141</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-parent.noarch</NAME>
+      <VERSION>0.225-244.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Format POD source into various output formats</COMMENTS>
+      <FILESIZE>287679</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-podlators.noarch</NAME>
+      <VERSION>2.5.1-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl module for resolving POD escape sequences</COMMENTS>
+      <FILESIZE>21091</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Pod-Escapes.noarch</NAME>
+      <VERSION>1.04-292.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Character encodings in Perl</COMMENTS>
+      <FILESIZE>10176350</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Encode.x86_64</NAME>
+      <VERSION>2.51-7.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Macros for rpmbuild</COMMENTS>
+      <FILESIZE>5134</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-macros.x86_64</NAME>
+      <VERSION>5.16.3-292.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>High resolution alarm, sleep, gettimeofday, interval timers</COMMENTS>
+      <FILESIZE>94069</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Time-HiRes.x86_64</NAME>
+      <VERSION>1.9725-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Networking constants and support functions</COMMENTS>
+      <FILESIZE>114497</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Socket.x86_64</NAME>
+      <VERSION>2.010-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>PathTools Perl module (Cwd, File::Spec)</COMMENTS>
+      <FILESIZE>174131</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-PathTools.x86_64</NAME>
+      <VERSION>3.40-5.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Persistence for Perl data structures</COMMENTS>
+      <FILESIZE>181031</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Storable.x86_64</NAME>
+      <VERSION>2.45-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl pragma to declare constants</COMMENTS>
+      <FILESIZE>26364</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-constant.noarch</NAME>
+      <VERSION>1.27-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Create or remove directory trees</COMMENTS>
+      <FILESIZE>50067</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-File-Path.noarch</NAME>
+      <VERSION>2.09-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Perl interpreter-based threads</COMMENTS>
+      <FILESIZE>98615</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-threads.x86_64</NAME>
+      <VERSION>1.87-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Framework for parsing POD documentation</COMMENTS>
+      <FILESIZE>538320</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:12</INSTALLDATE>
+      <NAME>perl-Pod-Simple.noarch</NAME>
+      <VERSION>3.28-4.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Practical Extraction and Report Language</COMMENTS>
+      <FILESIZE>23544135</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:14</INSTALLDATE>
+      <NAME>perl.x86_64</NAME>
+      <VERSION>5.16.3-292.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Tools used for process and utmp management.</COMMENTS>
+      <FILESIZE>109118</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:14</INSTALLDATE>
+      <NAME>sysvinit-tools.x86_64</NAME>
+      <VERSION>2.88-14.dsf.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>VIM filesystem layout</COMMENTS>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:14</INSTALLDATE>
+      <NAME>vim-filesystem.x86_64</NAME>
+      <VERSION>7.4.160-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A version of the VIM editor which includes recent enhancements</COMMENTS>
+      <FILESIZE>2292098</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:15</INSTALLDATE>
+      <NAME>vim-enhanced.x86_64</NAME>
+      <VERSION>7.4.160-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>The inittab file and the /etc/init.d scripts</COMMENTS>
+      <FILESIZE>1515082</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:15</INSTALLDATE>
+      <NAME>initscripts.x86_64</NAME>
+      <VERSION>9.49.39-1.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>An utility for finding files by name</COMMENTS>
+      <FILESIZE>387537</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:45:16</INSTALLDATE>
+      <NAME>mlocate.x86_64</NAME>
+      <VERSION>0.26-6.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Apache Portable Runtime library</COMMENTS>
+      <FILESIZE>226686</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:53:39</INSTALLDATE>
+      <NAME>apr.x86_64</NAME>
+      <VERSION>1.4.8-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Tools for use with the Apache HTTP Server</COMMENTS>
+      <FILESIZE>172252</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:53:39</INSTALLDATE>
+      <NAME>httpd-tools.x86_64</NAME>
+      <VERSION>2.4.6-67.el7.centos.6</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Helper application and MIME type associations for file types</COMMENTS>
+      <FILESIZE>63360</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:53:40</INSTALLDATE>
+      <NAME>mailcap.noarch</NAME>
+      <VERSION>2.1.41-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Error/exception handling in an OO-ish way</COMMENTS>
+      <FILESIZE>50015</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:58:36</INSTALLDATE>
+      <NAME>perl-Error.noarch</NAME>
+      <VERSION>0.17020-2.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A perl module for simple terminal control</COMMENTS>
+      <FILESIZE>59999</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:58:36</INSTALLDATE>
+      <NAME>perl-TermReadKey.x86_64</NAME>
+      <VERSION>2.30-20.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>A program for synchronizing files over a network</COMMENTS>
+      <FILESIZE>750018</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:58:36</INSTALLDATE>
+      <NAME>rsync.x86_64</NAME>
+      <VERSION>3.0.9-18.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Fast Version Control System</COMMENTS>
+      <FILESIZE>23172403</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 18:58:37</INSTALLDATE>
+      <NAME>git.x86_64</NAME>
+      <VERSION>1.8.3.1-12.el7_4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>C library for multiple precision complex arithmetic</COMMENTS>
+      <FILESIZE>113833</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:04:44</INSTALLDATE>
+      <NAME>libmpc.x86_64</NAME>
+      <VERSION>1.0.1-3.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>GCC OpenMP v3.0 shared support library</COMMENTS>
+      <FILESIZE>212144</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:04:45</INSTALLDATE>
+      <NAME>libgomp.x86_64</NAME>
+      <VERSION>4.8.5-16.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Header files for development using standard C libraries.</COMMENTS>
+      <FILESIZE>2342168</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:04:46</INSTALLDATE>
+      <NAME>glibc-headers.x86_64</NAME>
+      <VERSION>2.17-196.el7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>Various compilers (C, C++, Objective-C, Java, ...)</COMMENTS>
+      <FILESIZE>39248070</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>2017-10-24 19:04:48</INSTALLDATE>
+      <NAME>gcc.x86_64</NAME>
+      <VERSION>4.8.5-16.el7</VERSION>
+    </SOFTWARES>
+    <SOUNDS>
+      <DESCRIPTION>rev 01</DESCRIPTION>
+      <MANUFACTURER>Intel Corporation 82801AA AC'97 Audio Controller </MANUFACTURER>
+      <NAME>Multimedia audio controller</NAME>
+    </SOUNDS>
+    <SOUNDS>
+      <DESCRIPTION>rev 01</DESCRIPTION>
+      <MANUFACTURER>Intel Corporation 82801AA AC'97 Audio Controller </MANUFACTURER>
+      <NAME>Multimedia audio controller</NAME>
+    </SOUNDS>
+    <VIDEOS>
+      <CHIPSET>VGA compatible controller</CHIPSET>
+      <NAME>InnoTek Systemberatung GmbH VirtualBox Graphics Adapter</NAME>
+    </VIDEOS>
+  </CONTENT>
+  <DEVICEID>cd9e74304e24-2017-10-25-00-05-45</DEVICEID>
+  <QUERY>INVENTORY</QUERY>
+</REQUEST>

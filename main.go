@@ -6,14 +6,68 @@ import(
 	"os"
 	"fmt"
 	"encoding/json"
+	"time"
+	"strconv"
+        "golang.org/x/net/context"
+        _ "reflect"
+        _ "github.com/mattn/go-sqlite3"
+        "gopkg.in/olivere/elastic.v5"
 )
 
-
+const (
+    indexName    = "felicityopsm-cve-2017-10-25"
+    docType_soft      = "softRecord"
+    appName_soft      = "cVECPE"
+    indexMapping_soft = `{
+                        "mappings" : {
+                            "softRecord" : {
+                                "properties" : {
+                                    "IPAddress" : { "type" : "string", "index" : "not_analyzed" },
+                                    "HostName" : { "type" : "string", "index" : "analyzed" },
+                                    "SoftwareVersion" : { "type" : "string" },
+                                    "SoftwareName" : { "type" : "string"},
+                                    "SoftwareInstallDate" : { "type" : "date"}
+                                }
+                            }
+                        }
+                    }`
+	docType_hardware      = "hardwareRecord"
+    appName_hardware      = "cVECPE"
+    indexMapping_hardware = `{
+                        "mappings" : {
+                            "hardwareRecord" : {
+                                "properties" : {
+                                    "IPAddress" : { "type" : "string", "index" : "not_analyzed" },
+                                    "HostName" : { "type" : "string", "index" : "analyzed" },
+                                    "CPUCores" : { "type" : "string"},
+                                    "RAM" : { "type" : "string"},
+				    "SwapMemory" : { "type" : "string"},
+				    "OperatingSystem" : { "type" : "string"}
+                                }
+                            }
+                        }
+                    }`
+	docType_drive      = "drivesRecord"
+    appName_drive      = "cVECPE"
+    indexMapping_drive = `{
+                        "mappings" : {
+                            "driveRecord" : {
+                                "properties" : {
+                                    "IPAddress" : { "type" : "string", "index" : "not_analyzed" },
+                                    "HostName" : { "type" : "string", "index" : "analyzed" },
+                                    "FileSystem" : { "type" : "string" },
+                                    "VolumeName" : { "type" : "string"},
+                                    "MountLocation" : { "type" : "string"}
+                                }
+                            }
+                        }
+                    }`
+)
 
 
 type OCS_Software_Response struct {
 	IPAddress           string    `json:"IPAddress,omitempty"`
-	Name                string    `json:"HostName,omitempty"`
+	HostName                string    `json:"HostName,omitempty"`
 	SoftwareVersion     string    `json:"SoftwareVersion,omitempty"`
 	SoftwareName        string    `json:"SoftwareName,omitempty"`
 	SoftwareInstallDate time.Time `json:"SoftwareInstallDate,omitempty"`
@@ -21,17 +75,16 @@ type OCS_Software_Response struct {
 
 type OCS_Hardware_Response struct {
 	IPAddress  string `json:"IPAddress,omitempty"`
-	MACAddress string `json:"MACAddress,omitempty"`
 	Cores      string `json:"CPUCores,omitempty"`
-	Name       string `json:"HostName,omitempty"`
-	Memory     int32  `json:"RAM,omitempty"`
-	SwapMemory int32  `json:"SwapMemory,omitempty"`
+	HostName       string `json:"HostName,omitempty"`
+	Memory     int  `json:"RAM,omitempty"`
+	SwapMemory int  `json:"SwapMemory,omitempty"`
 	OSName     string `json:"OperatingSystem,omitempty"`
 }
 
-type OCS_Drives_Response struct {
+type OCS_Drive_Response struct {
 	IPAddress     string `json:"IPAddress,omitempty"`
-	Name          string `json:"HostName,omitempty"`
+	HostName          string `json:"HostName,omitempty"`
 	FileSystem    string `json:"FileSystem,omitempty"`
 	VolumeName    string `json:"VolumeName,omitempty"`
 	MountLocation string `json:"MountLocation,omitempty"`
@@ -81,7 +134,7 @@ type OCS_Hardware struct {
 	Name               string `json:"NAME,omitempty"`
 	OSName             string `json:"OSNAME,omitempty"`
 	//ProcessorT         string `json:"PROCESSORT,omitempty"`
-	//Swap               string `json:"SWAP,omitempty"`
+	Swap               string `json:"SWAP,omitempty"`
 	//DateLastLoggedUser string `json:"DATELASTLOGGEDUSER,omitempty"`
 	IPAddress          string `json:"IPADDR,omitempty"`
 	OSComments         string `json:"OSCOMMENTS,omitempty"`
@@ -123,7 +176,7 @@ type OCS_BIOS struct {
 }
 */
 type OCS_Drive struct {
-	//Type       string `json:"TYPE,omitempty"`
+	Type       string `json:"TYPE,omitempty"`
 	VolumN     string `json:"VOLUMN,omitempty"`
 	Filesystem string `json:"FILESYSTEM,omitempty"`
 	Free       string `json:"FREE,omitempty"`
@@ -171,14 +224,6 @@ func main(){
 	err = json.Unmarshal(jsonVal.Bytes(),&OCSData)
 	handlerError(err)
 
-
-
-
-
-
-
-
-
 	client, err := elastic.NewClient()
         if err != nil {
                 fmt.Println(err.Error())
@@ -188,7 +233,7 @@ func main(){
                 panic(err)
         }
         if !exists {
-                createIndex, err := client.CreateIndex(indexName).Body(indexMapping).Do(context.Background())
+                createIndex, err := client.CreateIndex(indexName).Body(indexMapping_soft).Do(context.Background())
                 if err != nil {
                         panic(err)
                 }
@@ -198,22 +243,54 @@ func main(){
                         fmt.Println("Created Index")
                 }
         }
+       	
 
-        for idx,valx := range DataArr {
-                fmt.Println(reflect.TypeOf(valx))
-                _, err := client.Index().Index(indexName).Type(docType).Id(strconv.Itoa(idx)).BodyJson(valx).Do(context.Background())
+	for idx,valx := range OCSData.Request.Content.Softwares {
+		var temp_soft_response OCS_Software_Response
+		temp_soft_response.IPAddress = OCSData.Request.Content.Hardware.IPAddress
+		temp_soft_response.HostName = OCSData.Request.Content.Hardware.Name
+		temp_soft_response.SoftwareVersion = valx.Version
+		temp_soft_response.SoftwareName = valx.Name
+		temp_soft_response.SoftwareInstallDate,err = time.Parse("2006-01-02 15:04:05",valx.Installdate)
+		handlerError(err)
+                _, err := client.Index().Index(indexName).Type(docType_soft).Id(strconv.Itoa(idx)+"_software").BodyJson(temp_soft_response).Do(context.Background())
                 if err != nil {
-                        fmt.Println(idx)
+                        fmt.Println(1)
+                        fmt.Println(err.Error())
+                }
+	}
+
+
+
+	//for hardware
+	var temp_hardware_response OCS_Hardware_Response
+	temp_hardware_response.IPAddress = OCSData.Request.Content.Hardware.IPAddress
+	temp_hardware_response.Cores = OCSData.Request.Content.CPUData.Cores
+	temp_hardware_response.HostName = OCSData.Request.Content.Hardware.Name
+	temp_hardware_response.Memory,_ = strconv.Atoi(OCSData.Request.Content.Hardware.Memory)
+	temp_hardware_response.SwapMemory,_ = strconv.Atoi(OCSData.Request.Content.Hardware.Swap)
+	temp_hardware_response.OSName = OCSData.Request.Content.Hardware.OSName
+	 _, err = client.Index().Index(indexName).Type(docType_hardware).Id(OCSData.Request.Content.Hardware.Name+"_hardware").BodyJson(temp_hardware_response).Do(context.Background())
+                if err != nil {
+                        fmt.Println(1)
                         fmt.Println(err.Error())
                 }
 
-        }
 
-
-
-
-
-	
+	// for drives
+	for idx,valx := range OCSData.Request.Content.Drives {
+		var temp_drive_response OCS_Drive_Response
+		temp_drive_response.IPAddress = OCSData.Request.Content.Hardware.IPAddress
+		temp_drive_response.HostName = OCSData.Request.Content.Hardware.Name
+		temp_drive_response.FileSystem = valx.Filesystem
+		temp_drive_response.VolumeName = valx.VolumN
+		temp_drive_response.MountLocation = valx.Type
+		 _, err := client.Index().Index(indexName).Type(docType_drive).Id(strconv.Itoa(idx)+"_drive").BodyJson(temp_drive_response).Do(context.Background())
+                if err != nil {
+                        fmt.Println(1)
+                        fmt.Println(err.Error())
+                }
+	} 
 }
 
 func handlerError(err error){
