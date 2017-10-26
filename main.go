@@ -15,7 +15,7 @@ import(
 )
 
 const (
-    indexName    = "felicityopsm-cve-2017-10-25"
+    indexName    = "opsmfelicity-dev-2017-10-26"
     docType_soft      = "softRecord"
     appName_soft      = "cVECPE"
     indexMapping_soft = `{
@@ -26,7 +26,8 @@ const (
                                     "HostName" : { "type" : "string", "index" : "analyzed" },
                                     "SoftwareVersion" : { "type" : "string" },
                                     "SoftwareName" : { "type" : "string"},
-                                    "SoftwareInstallDate" : { "type" : "date"}
+                                    "SoftwareInstallDate" : { "type" : "date"},
+				    "timestamp" : { "type" : "string", "index" : "analyzed" }
                                 }
                             }
                         }
@@ -42,7 +43,8 @@ const (
                                     "CPUCores" : { "type" : "string"},
                                     "RAM" : { "type" : "string"},
 				    "SwapMemory" : { "type" : "string"},
-				    "OperatingSystem" : { "type" : "string"}
+				    "OperatingSystem" : { "type" : "string"},
+				    "timestamp" : { "type" : "string", "index" : "analyzed"}
                                 }
                             }
                         }
@@ -57,7 +59,8 @@ const (
                                     "HostName" : { "type" : "string", "index" : "analyzed" },
                                     "FileSystem" : { "type" : "string" },
                                     "VolumeName" : { "type" : "string"},
-                                    "MountLocation" : { "type" : "string"}
+                                    "MountLocation" : { "type" : "string"},
+				    "timestamp" : { "type" : "string", "index" : "analyzed"}
                                 }
                             }
                         }
@@ -71,6 +74,7 @@ type OCS_Software_Response struct {
 	SoftwareVersion     string    `json:"SoftwareVersion,omitempty"`
 	SoftwareName        string    `json:"SoftwareName,omitempty"`
 	SoftwareInstallDate time.Time `json:"SoftwareInstallDate,omitempty"`
+	Timestamp	string	`json:"timestamp,omitempty"`
 }
 
 type OCS_Hardware_Response struct {
@@ -80,6 +84,7 @@ type OCS_Hardware_Response struct {
 	Memory     int  `json:"RAM,omitempty"`
 	SwapMemory int  `json:"SwapMemory,omitempty"`
 	OSName     string `json:"OperatingSystem,omitempty"`
+	Timestamp	string	`json:"timestamp,omitempty"`
 }
 
 type OCS_Drive_Response struct {
@@ -88,6 +93,7 @@ type OCS_Drive_Response struct {
 	FileSystem    string `json:"FileSystem,omitempty"`
 	VolumeName    string `json:"VolumeName,omitempty"`
 	MountLocation string `json:"MountLocation,omitempty"`
+	Timestamp	string	`json:"timestamp,omitempty"`
 }
 
 type OCS_Data_Request struct{
@@ -101,7 +107,7 @@ type OCS_Request struct {
 }
 
 type OCS_Content struct {
-	CPUData     OCS_CPUData      `json:"CPUS,omitempty"`
+	CPUData     []OCS_CPUData      `json:"CPUS,omitempty"`
 	Hardware    OCS_Hardware     `json:"HARDWARE,omitempty"`
 	Inputs      []OCS_Input      `json:"INPUTS,omitempty"`
 	Networks    string    `json:"NETWORKS,omitempty"`
@@ -215,7 +221,7 @@ type OCS_Video struct {
 
 
 func main(){
-	file, err := os.Open("/tmp/ocsdata")
+	file, err := os.Open("/tmp/ocs166")
 	handlerError(err)
 	dat :=  bufio.NewReader(file)	
 	jsonVal, err := xj.Convert(dat)
@@ -224,13 +230,13 @@ func main(){
 	err = json.Unmarshal(jsonVal.Bytes(),&OCSData)
 	handlerError(err)
 
-	client, err := elastic.NewClient()
+	client, err := elastic.NewClient(elastic.SetURL("http://192.168.2.254:60920"),elastic.SetSniff(false))
         if err != nil {
                 fmt.Println(err.Error())
         }
         exists, err := client.IndexExists(indexName).Do(context.Background())
         if err != nil {
-                panic(err)
+                fmt.Println(err)
         }
         if !exists {
                 createIndex, err := client.CreateIndex(indexName).Body(indexMapping_soft).Do(context.Background())
@@ -251,9 +257,10 @@ func main(){
 		temp_soft_response.HostName = OCSData.Request.Content.Hardware.Name
 		temp_soft_response.SoftwareVersion = valx.Version
 		temp_soft_response.SoftwareName = valx.Name
+		temp_soft_response.Timestamp = time.Now().Format(time.RFC3339)
 		temp_soft_response.SoftwareInstallDate,err = time.Parse("2006-01-02 15:04:05",valx.Installdate)
 		handlerError(err)
-                _, err := client.Index().Index(indexName).Type(docType_soft).Id(strconv.Itoa(idx)+"_software").BodyJson(temp_soft_response).Do(context.Background())
+                _, err := client.Index().Index(indexName).Type(docType_soft).Id(strconv.Itoa(idx)+"_"+temp_soft_response.IPAddress+"_software").BodyJson(temp_soft_response).Do(context.Background())
                 if err != nil {
                         fmt.Println(1)
                         fmt.Println(err.Error())
@@ -265,12 +272,13 @@ func main(){
 	//for hardware
 	var temp_hardware_response OCS_Hardware_Response
 	temp_hardware_response.IPAddress = OCSData.Request.Content.Hardware.IPAddress
-	temp_hardware_response.Cores = OCSData.Request.Content.CPUData.Cores
+	temp_hardware_response.Cores = OCSData.Request.Content.CPUData[0].Cores
 	temp_hardware_response.HostName = OCSData.Request.Content.Hardware.Name
 	temp_hardware_response.Memory,_ = strconv.Atoi(OCSData.Request.Content.Hardware.Memory)
 	temp_hardware_response.SwapMemory,_ = strconv.Atoi(OCSData.Request.Content.Hardware.Swap)
 	temp_hardware_response.OSName = OCSData.Request.Content.Hardware.OSName
-	 _, err = client.Index().Index(indexName).Type(docType_hardware).Id(OCSData.Request.Content.Hardware.Name+"_hardware").BodyJson(temp_hardware_response).Do(context.Background())
+	temp_hardware_response.Timestamp = time.Now().Format(time.RFC3339)
+	 _, err = client.Index().Index(indexName).Type(docType_hardware).Id(OCSData.Request.Content.Hardware.Name+"_"+temp_hardware_response.IPAddress+"_hardware").BodyJson(temp_hardware_response).Do(context.Background())
                 if err != nil {
                         fmt.Println(1)
                         fmt.Println(err.Error())
@@ -285,7 +293,8 @@ func main(){
 		temp_drive_response.FileSystem = valx.Filesystem
 		temp_drive_response.VolumeName = valx.VolumN
 		temp_drive_response.MountLocation = valx.Type
-		 _, err := client.Index().Index(indexName).Type(docType_drive).Id(strconv.Itoa(idx)+"_drive").BodyJson(temp_drive_response).Do(context.Background())
+		temp_drive_response.Timestamp = time.Now().Format(time.RFC3339)
+		 _, err := client.Index().Index(indexName).Type(docType_drive).Id(strconv.Itoa(idx)+"_"+temp_drive_response.IPAddress+"_drive").BodyJson(temp_drive_response).Do(context.Background())
                 if err != nil {
                         fmt.Println(1)
                         fmt.Println(err.Error())
