@@ -12,10 +12,14 @@ import(
         _ "reflect"
         _ "github.com/mattn/go-sqlite3"
         "gopkg.in/olivere/elastic.v5"
+	"strings"
+	"database/sql"
+	//"regexp"
+	"github.com/dgryski/go-fuzzstr"
 )
 
 const (
-    indexName    = "opsmfelicity-dev-2017-10-26"
+    indexName    = "opsmfelicity-dev-2017-10-27"
     docType_soft      = "softRecord"
     appName_soft      = "cVECPE"
     indexMapping_soft = `{
@@ -65,6 +69,22 @@ const (
                             }
                         }
                     }`
+	docType      = "vulnRecord"
+    appName      = "cVECPE"
+    indexMapping = `{
+                        "mappings" : {
+                            "vulnRecord" : {
+                                "properties" : {
+                                    "CVEID" : { "type" : "string", "index" : "not_analyzed" },
+                                    "CVESummary" : { "type" : "string", "index" : "analyzed" },
+                                    "CPEName" : { "type" : "string" },
+                                    "CPEVendor" : { "type" : "string"},
+                                    "CPEProduct" : { "type" : "string"},
+                                    "timestamp" : {"type" : "string", "index": "analyzed"}
+                                }
+                            }
+                        }
+                    }`
 )
 
 
@@ -75,6 +95,8 @@ type OCS_Software_Response struct {
 	SoftwareName        string    `json:"SoftwareName,omitempty"`
 	SoftwareInstallDate time.Time `json:"SoftwareInstallDate,omitempty"`
 	Timestamp	string	`json:"timestamp,omitempty"`
+	SoftwareCPEName string  `json:"CPEName,omitempty"`
+	SoftwareCVESummary string `json:"CVESummery,omitempty"`
 }
 
 type OCS_Hardware_Response struct {
@@ -219,8 +241,20 @@ type OCS_Video struct {
 }
 */
 
+type CVECPEData struct{
+        Cveid   string  `json:"CVEID,omitempty"`
+        Cvesummary      string  `json:"CVESummary,omitempty"`
+        Cpename string  `json:"CPEName,omitempty"`
+        Cpevendor       string  `json:"CPEVendor,omitempty"`
+        Cpeproduct      string  `json:"CPEProduct,omitempty"`
+        Timestamp       string  `json:"timestamp,omitempty"`
+}	
 
 func main(){
+
+	// Call a Function that will read all the sqlite3 data
+        //DataArr := PopulateDataArray()
+
 	file, err := os.Open("/tmp/ocs166")
 	handlerError(err)
 	dat :=  bufio.NewReader(file)	
@@ -257,6 +291,8 @@ func main(){
 		temp_soft_response.HostName = OCSData.Request.Content.Hardware.Name
 		temp_soft_response.SoftwareVersion = valx.Version
 		temp_soft_response.SoftwareName = valx.Name
+		temp_soft_response.SoftwareCPEName = getCPEName(temp_soft_response.SoftwareName, temp_soft_response.SoftwareVersion)
+		temp_soft_response.SoftwareCVESummary = getCVESummary(temp_soft_response.SoftwareCPEName)
 		temp_soft_response.Timestamp = time.Now().Format(time.RFC3339)
 		temp_soft_response.SoftwareInstallDate,err = time.Parse("2006-01-02 15:04:05",valx.Installdate)
 		handlerError(err)
@@ -266,7 +302,6 @@ func main(){
                         fmt.Println(err.Error())
                 }
 	}
-
 
 
 	//for hardware
@@ -299,7 +334,8 @@ func main(){
                         fmt.Println(1)
                         fmt.Println(err.Error())
                 }
-	} 
+	}
+
 }
 
 func handlerError(err error){
@@ -307,3 +343,98 @@ func handlerError(err error){
 		fmt.Println(err.Error())
 	}
 }
+
+
+func PopulateDataArray() []CVECPEData{
+         db, err := sql.Open("sqlite3", "./cve.sqlite3")
+        if err != nil {
+                fmt.Println(err.Error())
+        }
+
+rows, err := db.Query("select nvd.cve_id as cveid, nvd.summary as cvesummary, cpe.cpe_name as cpename, cpe.vendor as cpevendor, cpe.product as cpeproduct from nvds nvd, cpes cpe where cpe.nvd_id = nvd.id")
+
+        if err != nil {
+                fmt.Println(err.Error())
+        }
+
+        var cveid string
+        var cvesummary string
+        var cpename string
+        var cpevendor string
+        var cpeproduct string
+
+        var dataArray []CVECPEData
+
+        for rows.Next() {
+            err = rows.Scan(&cveid, &cvesummary, &cpename, &cpevendor, &cpeproduct)
+            if err != nil {
+                fmt.Println(err.Error())
+            } else {
+                var tempObj     CVECPEData
+                tempObj.Timestamp = time.Now().Format(time.RFC3339)
+                tempObj.Cveid = cveid
+                tempObj.Cvesummary = cvesummary
+                tempObj.Cpename = cpename
+                tempObj.Cpevendor = cpevendor
+                tempObj.Cpeproduct = cpeproduct
+                dataArray = append(dataArray, tempObj)
+            }
+        }
+
+        rows.Close()
+        db.Close()
+        return dataArray
+}
+
+//var cvecpe []CPECVEData
+
+
+/*type Cpenames struct{
+	Name string
+	ID string
+}
+*/
+
+func getCPEName(SoftwareName string, SoftwareVersion string){
+	
+	
+	resultName := strings.Split(SoftwareName, ".")
+	resultVersion := strings.Split(SoftwareVersion, "-")
+	
+	softwareName := resultName[0]
+	softwareVersion := resultVersion[0]
+	DataArr := PopulateDataArray()
+	var CPENames []string
+	
+	fmt.Println(DataArr)
+
+	        for idx,valx := range DataArr{
+			CPENames[idx] = DataArr[idx].Cpename
+		}	
+	
+		for _, val := range CPENames{
+			
+			indexptr := fuzzstr.NewIndex(CPENames)
+			SoftwareName := indexptr.Query(softwareName)
+			SoftwareName = indexptr.Filter(SoftwareName,softwareVersion+ "")
+
+		}
+
+		
+		return 
+}
+
+
+func getCVESummary(CPEName string) string{
+		
+	DataArr := PopulateDataArray() 
+		for idx := range DataArr{
+		    if DataArr.Cpename == CPEName +""{
+			return DataArr[idx].Cvesummary	        
+			break
+		    }
+		}		
+}
+
+
+
