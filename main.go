@@ -1,8 +1,11 @@
 package main
 
 import(
+	rnfs "github.com/renstrom/fuzzysearch/fuzzy"
 	xj "github.com/basgys/goxml2json"
+	"sort"
 	"bufio"
+	_ "github.com/schollz/closestmatch"
 	"os"
 	"fmt"
 	"encoding/json"
@@ -15,7 +18,7 @@ import(
 	"strings"
 	"database/sql"
 	//"regexp"
-	"github.com/dgryski/go-fuzzstr"
+	//fuzzstr "github.com/abhishekunotech/fuzzstring"
 )
 
 const (
@@ -283,8 +286,8 @@ func main(){
                         fmt.Println("Created Index")
                 }
         }
-       	
-
+	prepareCPENameArray()
+	_ = getCPEName("gcc","4.9")
 	for idx,valx := range OCSData.Request.Content.Softwares {
 		var temp_soft_response OCS_Software_Response
 		temp_soft_response.IPAddress = OCSData.Request.Content.Hardware.IPAddress
@@ -292,17 +295,20 @@ func main(){
 		temp_soft_response.SoftwareVersion = valx.Version
 		temp_soft_response.SoftwareName = valx.Name
 		temp_soft_response.SoftwareCPEName = getCPEName(temp_soft_response.SoftwareName, temp_soft_response.SoftwareVersion)
-		temp_soft_response.SoftwareCVESummary = getCVESummary(temp_soft_response.SoftwareCPEName)
+		if temp_soft_response.SoftwareCPEName == "no cpe"{
+			temp_soft_response.SoftwareCVESummary = "No Vulnerabilities"
+		} else {
+			temp_soft_response.SoftwareCVESummary = getCVESummary(temp_soft_response.SoftwareCPEName)
+		}
 		temp_soft_response.Timestamp = time.Now().Format(time.RFC3339)
 		temp_soft_response.SoftwareInstallDate,err = time.Parse("2006-01-02 15:04:05",valx.Installdate)
 		handlerError(err)
-                _, err := client.Index().Index(indexName).Type(docType_soft).Id(strconv.Itoa(idx)+"_"+temp_soft_response.IPAddress+"_software").BodyJson(temp_soft_response).Do(context.Background())
-                if err != nil {
+              _, err := client.Index().Index(indexName).Type(docType_soft).Id(strconv.Itoa(idx)+"_"+temp_soft_response.IPAddress+"_software").BodyJson(temp_soft_response).Do(context.Background())
+            if err != nil {
                         fmt.Println(1)
                         fmt.Println(err.Error())
                 }
 	}
-
 
 	//for hardware
 	var temp_hardware_response OCS_Hardware_Response
@@ -383,10 +389,11 @@ rows, err := db.Query("select nvd.cve_id as cveid, nvd.summary as cvesummary, cp
 
         rows.Close()
         db.Close()
+	//prepareCPENameArray()
         return dataArray
 }
 
-//var cvecpe []CPECVEData
+var cvecpe []CVECPEData
 
 
 /*type Cpenames struct{
@@ -395,45 +402,59 @@ rows, err := db.Query("select nvd.cve_id as cveid, nvd.summary as cvesummary, cp
 }
 */
 
-func getCPEName(SoftwareName string, SoftwareVersion string){
+var CPENameArray []string
+func prepareCPENameArray(){
+	cvecpe := PopulateDataArray()
+	for _,valx := range cvecpe{
+		CPENameArray = append(CPENameArray,valx.Cpename)
+	}
+}
+
+func getCPEName(SoftwareName string, SoftwareVersion string) string{
 	
 	
 	resultName := strings.Split(SoftwareName, ".")
 	resultVersion := strings.Split(SoftwareVersion, "-")
-	
+	fmt.Println(len(CPENameArray))
 	softwareName := resultName[0]
 	softwareVersion := resultVersion[0]
-	DataArr := PopulateDataArray()
-	var CPENames []string
-	
-	fmt.Println(DataArr)
+	fmt.Println(softwareName,softwareVersion)
+	rankList := rnfs.RankFind(softwareName,CPENameArray)
+	sort.Sort(rnfs.Ranks(rankList))
 
-	        for idx,valx := range DataArr{
-			CPENames[idx] = DataArr[idx].Cpename
-		}	
-	
-		for _, val := range CPENames{
-			
-			indexptr := fuzzstr.NewIndex(CPENames)
-			SoftwareName := indexptr.Query(softwareName)
-			SoftwareName = indexptr.Filter(SoftwareName,softwareVersion+ "")
+	var tophundredTargets []string
 
+see: 	for idx,valx := range rankList{
+		tophundredTargets = append(tophundredTargets,valx.Target)
+		fmt.Println(idx)
+		if idx > 100 {
+			break see
 		}
-
-		
-		return 
+	}
+	
+	rankListVersion := rnfs.RankFind(softwareVersion,tophundredTargets)
+	sort.Sort(rnfs.Ranks(rankListVersion))
+	var returnVal string
+	if len(rankListVersion) == 0 {
+		returnVal = "no cpe"
+	} else {
+		returnVal = rankListVersion[0].Target
+	}
+	return returnVal
 }
 
 
 func getCVESummary(CPEName string) string{
 		
-	DataArr := PopulateDataArray() 
-		for idx := range DataArr{
-		    if DataArr.Cpename == CPEName +""{
-			return DataArr[idx].Cvesummary	        
-			break
+var result string
+result = "No summary found"
+test:		for _,valx := range cvecpe{
+		    if valx.Cpename == CPEName +""{
+			result = valx.Cvesummary	        
+			break test
 		    }
-		}		
+		}
+	return result
 }
 
 
