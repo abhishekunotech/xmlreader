@@ -415,10 +415,10 @@ func getCPEName(SoftwareName string, SoftwareVersion string) string{
 	
 	resultName := strings.Split(SoftwareName, ".")
 	resultVersion := strings.Split(SoftwareVersion, "-")
-	fmt.Println(len(CPENameArray))
+	//fmt.Println(len(CPENameArray))
 	softwareName := resultName[0]
 	softwareVersion := resultVersion[0]
-	fmt.Println(softwareName,softwareVersion)
+	//fmt.Println(softwareName,softwareVersion)
 	rankList := rnfs.RankFind(softwareName,CPENameArray)
 	sort.Sort(rnfs.Ranks(rankList))
 
@@ -426,7 +426,7 @@ func getCPEName(SoftwareName string, SoftwareVersion string) string{
 
 see: 	for idx,valx := range rankList{
 		tophundredTargets = append(tophundredTargets,valx.Target)
-		fmt.Println(idx)
+	//	fmt.Println(idx)
 		if idx > 100 {
 			break see
 		}
