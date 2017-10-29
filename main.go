@@ -17,12 +17,10 @@ import(
         "gopkg.in/olivere/elastic.v5"
 	"strings"
 	"database/sql"
-	//"regexp"
-	//fuzzstr "github.com/abhishekunotech/fuzzstring"
 )
 
 const (
-    indexName    = "opsmfelicity-dev-2017-10-27"
+    indexName    = "felicityopsmanagement-records"
     docType_soft      = "softRecord"
     appName_soft      = "cVECPE"
     indexMapping_soft = `{
@@ -132,7 +130,7 @@ type OCS_Request struct {
 }
 
 type OCS_Content struct {
-	CPUData     []OCS_CPUData      `json:"CPUS,omitempty"`
+	CPUData     OCS_CPUData      `json:"CPUS,omitempty"`
 	Hardware    OCS_Hardware     `json:"HARDWARE,omitempty"`
 	Inputs      []OCS_Input      `json:"INPUTS,omitempty"`
 	Networks    string    `json:"NETWORKS,omitempty"`
@@ -258,7 +256,7 @@ func main(){
 	// Call a Function that will read all the sqlite3 data
         //DataArr := PopulateDataArray()
 
-	file, err := os.Open("/tmp/ocs166")
+	file, err := os.Open("/tmp/ocslog")
 	handlerError(err)
 	dat :=  bufio.NewReader(file)	
 	jsonVal, err := xj.Convert(dat)
@@ -287,7 +285,6 @@ func main(){
                 }
         }
 	prepareCPENameArray()
-	_ = getCPEName("gcc","4.9")
 	for idx,valx := range OCSData.Request.Content.Softwares {
 		var temp_soft_response OCS_Software_Response
 		temp_soft_response.IPAddress = OCSData.Request.Content.Hardware.IPAddress
@@ -313,7 +310,7 @@ func main(){
 	//for hardware
 	var temp_hardware_response OCS_Hardware_Response
 	temp_hardware_response.IPAddress = OCSData.Request.Content.Hardware.IPAddress
-	temp_hardware_response.Cores = OCSData.Request.Content.CPUData[0].Cores
+	temp_hardware_response.Cores = OCSData.Request.Content.CPUData.Cores
 	temp_hardware_response.HostName = OCSData.Request.Content.Hardware.Name
 	temp_hardware_response.Memory,_ = strconv.Atoi(OCSData.Request.Content.Hardware.Memory)
 	temp_hardware_response.SwapMemory,_ = strconv.Atoi(OCSData.Request.Content.Hardware.Swap)
@@ -404,7 +401,7 @@ var cvecpe []CVECPEData
 
 var CPENameArray []string
 func prepareCPENameArray(){
-	cvecpe := PopulateDataArray()
+	cvecpe = PopulateDataArray()
 	for _,valx := range cvecpe{
 		CPENameArray = append(CPENameArray,valx.Cpename)
 	}
@@ -445,10 +442,10 @@ see: 	for idx,valx := range rankList{
 
 
 func getCVESummary(CPEName string) string{
-		
+fmt.Println(CPEName)		
 var result string
 result = "No summary found"
-test:		for _,valx := range cvecpe{
+test:	for _,valx := range cvecpe{
 		    if valx.Cpename == CPEName +""{
 			result = valx.Cvesummary	        
 			break test
